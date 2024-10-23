@@ -1,4 +1,5 @@
 import { SessionProvider } from "next-auth/react";
+import Providers from "./chakra/providers";
 
 export default function RootLayout({
     children,
@@ -8,7 +9,9 @@ export default function RootLayout({
     return (
         <SessionProvider>
             <html lang="en">
-                <body>{children}</body>
+                <body>
+                    <Providers>{children}</Providers>
+                </body>
             </html>
         </SessionProvider>
     );
