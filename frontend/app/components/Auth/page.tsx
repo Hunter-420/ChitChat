@@ -11,7 +11,6 @@ interface IAuthProps {
 
 const Auth: React.FunctionComponent<IAuthProps> = ({
     session,
-    reloadSession,
 }) => {
     console.log("Session: ",session);
     const [username, setUsername] = useState("");
