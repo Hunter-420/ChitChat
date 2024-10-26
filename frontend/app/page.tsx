@@ -1,9 +1,18 @@
-import Login from "./components/login";
- 
+import Auth from "./components/Auth/page";
+import Chat from "./components/Chat/page";
+import { Box } from "@chakra-ui/react";
+import getSession from "./lib/getSession";
 
-export default function Page() {
+export default async function Page() {
+    const session = await getSession();
+    console.log("Hesre is s : ",session);
     return (
-        
-        <Login/>
+        <Box>
+            {session?.user?.username ? (
+                <Chat />
+            ) : (
+                <Auth session={session} />
+            )}
+        </Box>
     );
 }

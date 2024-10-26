@@ -44,7 +44,7 @@ export const theme = extendTheme({
             body: {
                 bg: mode("blackAlpha.800", "blackAlpha.800")(props),
 
-                color: mode("whiteAlpha.800", "blackAlpha.800")(props),
+                color: mode("whiteAlpha.800", "whiteAlpha.800")(props),
             },
         }),
     },
