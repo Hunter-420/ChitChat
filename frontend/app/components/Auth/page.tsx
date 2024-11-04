@@ -6,7 +6,6 @@ import { useState } from "react";
 
 interface IAuthProps {
     session: Session | null;
-    reloadSession: () => void;
 }
 
 const Auth: React.FunctionComponent<IAuthProps> = ({
